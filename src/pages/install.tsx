@@ -72,7 +72,14 @@ const Index: NextPage<{ version: string }> = ({ version }) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const res = await (await fetch("https://api.github.com/repos/thoratica/dutmoticon/releases")).json();
+  const res = await (
+    await fetch("https://api.github.com/repos/thoratica/dutmoticon/releases", {
+      headers: {
+        Accept: "application/vnd.github+json",
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+      },
+    })
+  ).json();
   const version = res[0].tag_name;
 
   return { props: { version } };
