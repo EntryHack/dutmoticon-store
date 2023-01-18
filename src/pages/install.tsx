@@ -27,9 +27,7 @@ const Index: NextPage<{ version: string }> = ({ version }) => {
                 Dutmoticon을 사용해 보세요
               </h1>
               <p className="text-xl 0.5md:text-lg xs:text-base text-white/90 font-medium mt-4 word break-keep text-shadow">
-                기본 제공 스티커만으로는 부족하셨나요? 누구나 Dutmoticon에 내가 만든 이모티콘을 올리고
-                <sup>1)</sup>, 다른 사람의 이모티콘을 엔트리로 가져가 사용할<sup>2)</sup> 수 있어요. Dutmoticon으로
-                개성을 표현해보세요.
+                Dutmoticon에 흥미가 생기셨나요? 원한다면 지금 바로 사용해 볼 수 있어요.
               </p>
               <div className="flex xs:flex-col gap-3 mt-5">
                 <a
