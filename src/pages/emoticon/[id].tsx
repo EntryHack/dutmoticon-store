@@ -1,11 +1,10 @@
 import Head from "next/head";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import { Fragment, useEffect, useMemo, useState } from "react";
-import { format, formatDistanceToNowStrict } from "date-fns";
-import { ko } from "date-fns/locale";
+import { format } from "date-fns";
 import Layout from "@/components/Layout";
 import emoticons from "@/emoticons/emoticons.json";
-import { useRouter } from "next/router";
+import recommended from "@/emoticons/recommended.json";
 
 const Index = () => {
   const router = useRouter();
@@ -33,23 +32,6 @@ const Index = () => {
       <Layout>
         <section className="max-w-7xl mx-auto px-6 py-8 flex h-max w-full">
           <div className="flex gap-x-8 w-full">
-            <div className="absolute pt-1.5 pl-1.5 flex gap-x-0.5">
-              {emoticon.default && (
-                <div className="bg-pink-500 text-white text-xs flex items-center justify-center px-1.5 py-0.5 rounded-full">
-                  <span className="font-medium leading-4">기본</span>
-                </div>
-              )}
-              {emoticon.official && (
-                <div className="bg-emerald-500 text-white text-xs flex items-center justify-center px-1.5 py-0.5 rounded-full">
-                  <span className="font-medium leading-4">공식</span>
-                </div>
-              )}
-              {emoticon.recommended && (
-                <div className="bg-brand text-white text-xs flex items-center justify-center px-1.5 py-0.5 rounded-full">
-                  <span className="font-medium leading-4">추천</span>
-                </div>
-              )}
-            </div>
             <div className="aspect-square flex items-center justify-center h-max flex-shrink-0 border border-neutral-100 rounded-xl shadow-md">
               <img
                 src={`https://playentry.org/uploads/${emoticon.image.filename.slice(
@@ -147,10 +129,33 @@ const Index = () => {
               </td>
             </tr>
             <tr className="border-r border-r-neutral-100">
-              <th className="text-center text-[17px] font-medium bg-neutral-50 px-4 py-1 whitespace-nowrap w-0">
+              <th className="text-center text-[17px] font-medium border-b border-b-neutral-100 bg-neutral-50 px-4 py-1 whitespace-nowrap w-0">
                 이모티콘 개수
               </th>
-              <td className="text-[17px] font-medium px-4 py-1">{images.length}</td>
+              <td className="text-[17px] font-medium border-b border-b-neutral-100 px-4 py-1">{images.length}</td>
+            </tr>
+            <tr className="border-r border-r-neutral-100">
+              <th className="text-center text-[17px] font-medium bg-neutral-50 px-4 py-1 whitespace-nowrap w-0">
+                태그
+              </th>
+              <td className="text-[17px] font-medium px-4 py-1 flex gap-x-1">
+                {!(emoticon.default || emoticon.official || recommended.includes(emoticon.id)) && "-"}
+                {emoticon.default && (
+                  <div className="bg-pink-500 text-white text-sm flex items-center justify-center px-2 py-1 w-max rounded-full">
+                    <span className="font-medium leading-4">기본</span>
+                  </div>
+                )}
+                {emoticon.official && (
+                  <div className="bg-emerald-500 text-white text-sm flex items-center justify-center px-2 py-1 w-max rounded-full">
+                    <span className="font-medium leading-4">공식</span>
+                  </div>
+                )}
+                {recommended.includes(emoticon.id) && (
+                  <div className="bg-brand text-white text-sm flex items-center justify-center px-2 py-1 w-max rounded-full">
+                    <span className="font-medium leading-4">추천</span>
+                  </div>
+                )}
+              </td>
             </tr>
           </table>
         </section>

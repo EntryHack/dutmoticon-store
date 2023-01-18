@@ -59,11 +59,22 @@
       "imageType": "svg"
     },
     "date": 1673427900000,
-    "official": true,
-    "recommended": true
+    "official": true
   },
   {
     "id": "dutmoticon_001",
+    "title": "둣모텍스트",
+    "authors": [{ "id": "60bc5559659bf40bd15d022c", "name": "띠까" }],
+    "image": {
+      "id": "63c77e0680df215995c83c19",
+      "filename": "0vcksrlkld17a16x1w9ga2c94351wy2i",
+      "imageType": "svg"
+    },
+    "date": 1673427900000,
+    "official": true
+  },
+  {
+    "id": "dutmoticon_002",
     "title": "디엘티콘",
     "authors": [{ "id": "5bb5fae2d856ffb51993a39c", "name": "디엘" }],
     "image": {
@@ -71,7 +82,28 @@
       "filename": "9r5xd0r6lcrp8skk073pf1cfe48tfp27",
       "imageType": "svg"
     },
-    "date": 1673444100000,
-    "recommended": true
+    "date": 1673444100000
+  },
+  {
+    "id": "dutmoticon_003",
+    "title": "우주에서 유일한 해백한 진실",
+    "authors": [{ "id": "570779310e41ca06e6d0f548", "name": "𝙩𝙟𝙨𝙩𝙤𝙙⚡" }],
+    "image": {
+      "id": "63c7973e3e6b7e7bebbed231",
+      "filename": "qkf58biyld1b4eqw231mf1cfe43e7sav",
+      "imageType": "svg"
+    },
+    "date": 1673583240000
+  },
+  {
+    "id": "dutmoticon_004",
+    "title": "reemoticon",
+    "authors": [{ "id": "636f5696c2af2f00b48ce7ec", "name": "reeㅤ" }],
+    "image": {
+      "id": "63c782093e6b7e7bebbec494",
+      "filename": "b13w9qp9ld17w3jx231mf1cfe49ynjfb",
+      "imageType": "svg"
+    },
+    "date": 1674016560000
   }
 ]

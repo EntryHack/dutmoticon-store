@@ -5,6 +5,7 @@ import { format, formatDistanceToNowStrict } from "date-fns";
 import { ko } from "date-fns/locale";
 import Layout from "@/components/Layout";
 import emoticons from "@/emoticons/emoticons.json";
+import recommended from "@/emoticons/recommended.json";
 
 const Index = () => {
   return (
@@ -18,7 +19,7 @@ const Index = () => {
       </Head>
       <Layout>
         <section
-          className="bg-brand bg-top bg-[length:1600px] bg-no-repeat w-full h-[600px]"
+          className="bg-brand bg-top bg-[length:1600px] bg-no-repeat w-full h-[600px] flex-shrink-0"
           style={{ backgroundImage: "url('/background.png')" }}
         >
           <div className="max-w-7xl mx-auto px-6 flex items-center h-full">
@@ -53,17 +54,16 @@ const Index = () => {
             </div>
           </div>
         </section>
-        <section className="max-w-7xl mx-auto px-6 flex flex-col">
-          <h2 className="text-2xl font-semibold mt-8">최근 업로드된 이모티콘</h2>
-          <div className="mt-2 grid grid-cols-5 gap-x-4">
-            {emoticons
-              .slice(-5)
-              .reverse()
+        <section className="max-w-7xl w-full mx-auto px-6 pb-2 flex flex-col">
+          <h2 className="text-2xl font-semibold mt-8">추천 이모티콘</h2>
+          <div className="mt-2 grid grid-cols-5 w-full gap-4">
+            {recommended
+              .map((id) => emoticons.find((emoticon) => emoticon.id === id)!)
               .map((emoticon) => {
                 return (
                   <Link
                     href={`/emoticon/${emoticon.id}`}
-                    className="flex flex-col rounded-xl overflow-hidden border border-neutral-100 shadow-md mb-2 hover:transform hover:-translate-y-1.5 transition-transform duration-300"
+                    className="flex flex-col rounded-xl overflow-hidden border border-neutral-100 shadow-md hover:transform hover:-translate-y-1.5 transition-transform duration-300"
                     key={emoticon.id}
                   >
                     <div className="absolute pt-1.5 pl-1.5 flex gap-x-1">
@@ -77,7 +77,7 @@ const Index = () => {
                           <span className="font-medium leading-4">공식</span>
                         </div>
                       )}
-                      {emoticon.recommended && (
+                      {recommended.includes(emoticon.id) && (
                         <div className="bg-brand text-white text-sm flex items-center justify-center px-2 py-1 rounded-full">
                           <span className="font-medium leading-4">추천</span>
                         </div>
@@ -97,7 +97,7 @@ const Index = () => {
                       >
                         {emoticon.title}
                       </h3>
-                      <span className="font-medium leading-4 mt-1 whitespace-nowrap text-ellipsis overflow-hidden">
+                      <span className="font-medium leading-[18px] mt-[3px] whitespace-nowrap text-ellipsis overflow-hidden">
                         {emoticon.authors.map((author, i) => {
                           return (
                             <Fragment key={author.id}>
@@ -110,7 +110,7 @@ const Index = () => {
                         })}
                       </span>
                       <span
-                        className="text-neutral-500 text-sm font-medium leading-4 mt-1 whitespace-nowrap text-ellipsis overflow-hidden"
+                        className="text-neutral-500 text-sm font-medium leading-4 mt-0.5 whitespace-nowrap text-ellipsis overflow-hidden"
                         title={format(emoticon.date, "yyyy년 MM월 dd일 HH시 mm분")}
                       >
                         {formatDistanceToNowStrict(emoticon.date, { locale: ko })} 전
@@ -119,6 +119,71 @@ const Index = () => {
                   </Link>
                 );
               })}
+          </div>
+        </section>
+        <section className="max-w-7xl w-full mx-auto px-6 pb-2 mb-8 flex flex-col">
+          <h2 className="text-2xl font-semibold mt-8">모든 이모티콘</h2>
+          <div className="mt-2 grid grid-cols-5 w-full gap-4">
+            {[...emoticons].reverse().map((emoticon) => {
+              return (
+                <Link
+                  href={`/emoticon/${emoticon.id}`}
+                  className="flex flex-col rounded-xl overflow-hidden border border-neutral-100 shadow-md hover:transform hover:-translate-y-1.5 transition-transform duration-300"
+                  key={emoticon.id}
+                >
+                  <div className="absolute pt-1.5 pl-1.5 flex gap-x-1">
+                    {emoticon.default && (
+                      <div className="bg-pink-500 text-white text-sm flex items-center justify-center px-2 py-1 rounded-full">
+                        <span className="font-medium leading-4">기본</span>
+                      </div>
+                    )}
+                    {emoticon.official && (
+                      <div className="bg-emerald-500 text-white text-sm flex items-center justify-center px-2 py-1 rounded-full">
+                        <span className="font-medium leading-4">공식</span>
+                      </div>
+                    )}
+                    {recommended.includes(emoticon.id) && (
+                      <div className="bg-brand text-white text-sm flex items-center justify-center px-2 py-1 rounded-full">
+                        <span className="font-medium leading-4">추천</span>
+                      </div>
+                    )}
+                  </div>
+                  <img
+                    src={`https://playentry.org/uploads/${emoticon.image.filename.slice(
+                      0,
+                      2
+                    )}/${emoticon.image.filename.slice(2, 4)}/${emoticon.image.filename}.${emoticon.image.imageType}`}
+                    className="border-b border-b-neutral-100 aspect-video"
+                  />
+                  <div className="flex flex-col justify-center w-full min-w-0 px-4 py-3">
+                    <h3
+                      className="text-lg font-semibold leading-5 whitespace-nowrap text-ellipsis overflow-hidden"
+                      title={emoticon.title}
+                    >
+                      {emoticon.title}
+                    </h3>
+                    <span className="font-medium leading-[18px] mt-[3px] whitespace-nowrap text-ellipsis overflow-hidden">
+                      {emoticon.authors.map((author, i) => {
+                        return (
+                          <Fragment key={author.id}>
+                            <span className="text-brand" title={author.name}>
+                              {author.name}
+                            </span>
+                            {emoticon.authors.length - 1 !== i && ", "}
+                          </Fragment>
+                        );
+                      })}
+                    </span>
+                    <span
+                      className="text-neutral-500 text-sm font-medium leading-4 mt-0.5 whitespace-nowrap text-ellipsis overflow-hidden"
+                      title={format(emoticon.date, "yyyy년 MM월 dd일 HH시 mm분")}
+                    >
+                      {formatDistanceToNowStrict(emoticon.date, { locale: ko })} 전
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </section>
       </Layout>
