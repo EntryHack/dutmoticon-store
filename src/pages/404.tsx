@@ -6,7 +6,7 @@ const Custom404 = () => {
   return (
     <>
       <Head>
-        <title>404 | Dutmoticon 스토어</title>
+        <title>404 Not Found | Dutmoticon 스토어</title>
         <meta charSet="UTF-8" />
         <meta name="description" content="엔트리에서 더 많은 스티커를 사용하세요" />
         <meta property="og:type" content="website" />
