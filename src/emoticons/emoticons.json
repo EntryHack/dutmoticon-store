@@ -116,5 +116,27 @@
       "imageType": "svg"
     },
     "date": 1674044280000
+  },
+  {
+    "id": "dutmoticon_006",
+    "title": "(제목 없음)",
+    "authors": [{ "id": "5fb61b55df44da0437835ca4", "name": "킹갓슬라임" }],
+    "image": {
+      "id": "63c7f11e211d2b1d25b26842",
+      "filename": "g3tnj499ld1otlyz2yw3f1cfe4ewjvke",
+      "imageType": "svg"
+    },
+    "date": 1673577000000
+  },
+  {
+    "id": "dutmoticon_007",
+    "title": "민트초코",
+    "authors": [{ "id": "633c47a579baf000e6b4ec1e", "name": "흐음ㅁ" }],
+    "image": {
+      "id": "63c7f04f28e532b4f6b85999",
+      "filename": "c434gumsld1op5bd0zquf1cfe4bf9kcl",
+      "imageType": "svg"
+    },
+    "date": 1674047100000
   }
 ]
