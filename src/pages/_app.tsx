@@ -1,6 +1,14 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import { AnimatePresence } from "framer-motion";
+import type { AppProps } from "next/app";
+import "@/styles/fonts.css";
+import "@/styles/globals.css";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+const App = ({ Component, pageProps }: AppProps) => {
+  return (
+    <AnimatePresence mode="wait" initial={false}>
+      <Component {...pageProps} />
+    </AnimatePresence>
+  );
+};
+
+export default App;
