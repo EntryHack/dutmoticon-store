@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import NextCors from "nextjs-cors";
 import emoticons from "@/emoticons/emoticons.json";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -12,7 +11,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
           .map((id) => id.trim())
       : undefined;
 
-    await NextCors(req, res, { methods: ["GET", "POST"], origin: "https://playentry.org" });
     if (ids) res.status(200).json(ids.map((id) => emoticons.find((emoticon) => emoticon.id === id)));
     res.status(200).json(emoticons);
   } catch (_) {
