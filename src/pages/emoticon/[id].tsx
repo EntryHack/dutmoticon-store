@@ -31,11 +31,16 @@ const Index: NextPage<{
         <meta name="description" content="엔트리에서 더 많은 스티커를 사용하세요" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={emoticon.title} />
+        <meta name="twitter:title" content={emoticon.title} />
         <meta property="og:site_name" content="Dutmoticon 스토어" />
         <meta property="og:description" content="엔트리에서 더 많은 스티커를 사용하세요" />
+        <meta name="twitter:description" content="엔트리에서 더 많은 스티커를 사용하세요" />
         <meta property="og:image" content="/og-image.png" />
         <meta property="og:image:width" content="1920" />
         <meta property="og:image:height" content="1080" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image:src" content="/og-image.png" />
+        <meta name="theme-color" content="#126fff" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/svg+xml" href="/logo.svg" />
       </Head>
@@ -112,7 +117,9 @@ const Index: NextPage<{
                 <th className="text-center text-[17px] font-medium 0.5md:text-base 0.5md:font-medium border-b border-b-neutral-100 bg-neutral-50 px-4 py-1.5 0.5md:px-3 whitespace-nowrap w-0">
                   이름
                 </th>
-                <td className="text-[17px] font-medium 0.5md:text-base 0.5md:font-medium border-b border-b-neutral-100 px-4 py-1.5 0.5md:px-3">{emoticon.title}</td>
+                <td className="text-[17px] font-medium 0.5md:text-base 0.5md:font-medium border-b border-b-neutral-100 px-4 py-1.5 0.5md:px-3">
+                  {emoticon.title}
+                </td>
               </tr>
               <tr className="border-r border-r-neutral-100">
                 <th className="text-center text-[17px] font-medium 0.5md:text-base 0.5md:font-medium border-b border-b-neutral-100 bg-neutral-50 px-4 py-1.5 0.5md:px-3 whitespace-nowrap w-0">
@@ -148,7 +155,9 @@ const Index: NextPage<{
                 <th className="text-center text-[17px] font-medium 0.5md:text-base 0.5md:font-medium border-b border-b-neutral-100 bg-neutral-50 px-4 py-1.5 0.5md:px-3 whitespace-nowrap w-0">
                   이모티콘 개수
                 </th>
-                <td className="text-[17px] font-medium 0.5md:text-base 0.5md:font-medium border-b border-b-neutral-100 px-4 py-1.5 0.5md:px-3">{images.length}</td>
+                <td className="text-[17px] font-medium 0.5md:text-base 0.5md:font-medium border-b border-b-neutral-100 px-4 py-1.5 0.5md:px-3">
+                  {images.length}
+                </td>
               </tr>
               <tr className="border-r border-r-neutral-100">
                 <th className="text-center text-[17px] font-medium 0.5md:text-base 0.5md:font-medium bg-neutral-50 px-4 py-1.5 0.5md:px-3 whitespace-nowrap w-0">

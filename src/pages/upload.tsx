@@ -6,12 +6,12 @@ const Index: NextPage<{ version: string }> = ({ version }) => {
   return (
     <>
       <Head>
-        <title>Dutmoticon 설치 | Dutmoticon 스토어</title>
+        <title>내 이모티콘 올리기 | Dutmoticon 스토어</title>
         <meta charSet="UTF-8" />
         <meta name="description" content="엔트리에서 더 많은 스티커를 사용하세요" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Dutmoticon 설치" />
-        <meta name="twitter:title" content="Dutmoticon 설치" />
+        <meta property="og:title" content="내 이모티콘 올리기" />
+        <meta name="twitter:title" content="내 이모티콘 올리기" />
         <meta property="og:site_name" content="Dutmoticon 스토어" />
         <meta property="og:description" content="엔트리에서 더 많은 스티커를 사용하세요" />
         <meta name="twitter:description" content="엔트리에서 더 많은 스티커를 사용하세요" />

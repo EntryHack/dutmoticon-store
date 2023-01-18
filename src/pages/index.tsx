@@ -16,18 +16,21 @@ const Index = () => {
         <meta name="description" content="엔트리에서 더 많은 스티커를 사용하세요" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Dutmoticon 스토어" />
+        <meta name="twitter:title" content="Dutmoticon 스토어" />
         <meta property="og:site_name" content="Dutmoticon 스토어" />
         <meta property="og:description" content="엔트리에서 더 많은 스티커를 사용하세요" />
+        <meta name="twitter:description" content="엔트리에서 더 많은 스티커를 사용하세요" />
         <meta property="og:image" content="/og-image.png" />
         <meta property="og:image:width" content="1920" />
         <meta property="og:image:height" content="1080" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image:src" content="/og-image.png" />
+        <meta name="theme-color" content="#126fff" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/svg+xml" href="/logo.svg" />
       </Head>
       <Layout>
-        <section
-          className="bg-brand bg-top bg-[length:1600px] 0.5md:bg-[length:600px] bg-no-repeat bg-[url('/background.png')] 0.5md:bg-[url('/background-small.png')] w-full h-[600px] flex-shrink-0"
-        >
+        <section className="bg-brand bg-top bg-[length:1600px] 0.5md:bg-[length:600px] bg-no-repeat bg-[url('/background.png')] 0.5md:bg-[url('/background-small.png')] w-full h-[600px] flex-shrink-0">
           <div className="max-w-7xl mx-auto px-10 0.5md:px-6 flex items-center h-full">
             <div className="max-w-4xl">
               <h1 className="text-5xl 0.5md:text-[42px] xs:text-4xl text-white font-semibold break-keep text-shadow">
