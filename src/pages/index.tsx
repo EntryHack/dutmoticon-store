@@ -14,30 +14,36 @@ const Index = () => {
         <title>Dutmoticon 스토어</title>
         <meta charSet="UTF-8" />
         <meta name="description" content="엔트리에서 더 많은 스티커를 사용하세요" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Dutmoticon 스토어" />
+        <meta property="og:site_name" content="Dutmoticon 스토어" />
+        <meta property="og:description" content="엔트리에서 더 많은 스티커를 사용하세요" />
+        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:image:width" content="1920" />
+        <meta property="og:image:height" content="1080" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/svg+xml" href="/logo.svg" />
       </Head>
       <Layout>
         <section
-          className="bg-brand bg-top bg-[length:1600px] bg-no-repeat w-full h-[600px] flex-shrink-0"
-          style={{ backgroundImage: "url('/background.png')" }}
+          className="bg-brand bg-top bg-[length:1600px] 0.5md:bg-[length:600px] bg-no-repeat bg-[url('/background.png')] 0.5md:bg-[url('/background-small.png')] w-full h-[600px] flex-shrink-0"
         >
-          <div className="max-w-7xl mx-auto px-6 flex items-center h-full">
+          <div className="max-w-7xl mx-auto px-10 0.5md:px-6 flex items-center h-full">
             <div className="max-w-4xl">
-              <h1 className="text-5xl text-white font-semibold break-keep text-shadow">
+              <h1 className="text-5xl 0.5md:text-[42px] xs:text-4xl text-white font-semibold break-keep text-shadow">
                 엔트리에서 더 많은 스티커를 사용하세요
               </h1>
-              <p className="text-xl text-white/90 font-medium mt-4 word break-keep text-shadow">
+              <p className="text-xl 0.5md:text-lg xs:text-base text-white/90 font-medium mt-4 word break-keep text-shadow">
                 기본 제공 스티커만으로는 부족하셨나요? 누구나 Dutmoticon에 내가 만든 이모티콘을 올리고
                 <sup>1)</sup>, 다른 사람의 이모티콘을 엔트리로 가져가 사용할<sup>2)</sup> 수 있어요. Dutmoticon으로
                 개성을 표현해보세요.
               </p>
-              <p className="text-sm text-white/80 font-medium leading-5 mt-2 text-shadow">
+              <p className="text-sm xs:text-xs text-white/80 font-medium leading-5 mt-2 text-shadow">
                 1) Dutmoticon에 공개 전 검수 절차가 진행됩니다.
                 <br />
                 2) Chrome/Firefox용 Dutmoticon 확장 프로그램/애드온 설치가 필요합니다.
               </p>
-              <div className="flex gap-x-3 mt-5">
+              <div className="flex xs:flex-col gap-3 mt-5">
                 <Link
                   href="/install"
                   className="text-lg font-medium px-6 py-3 leading-4 rounded-lg bg-white/20 backdrop-blur-md text-white text-shadow shadow-md"
@@ -54,9 +60,9 @@ const Index = () => {
             </div>
           </div>
         </section>
-        <section className="max-w-7xl w-full mx-auto px-6 pb-2 flex flex-col">
+        <section className="max-w-7xl w-full mx-auto px-10 0.5md:px-6 pb-2 flex flex-col">
           <h2 className="text-2xl font-semibold mt-8">추천 이모티콘</h2>
-          <div className="mt-2 grid grid-cols-5 w-full gap-4">
+          <div className="mt-2 grid grid-cols-5 0.5xl:grid-cols-4 0.5lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 w-full gap-4">
             {recommended
               .map((id) => emoticons.find((emoticon) => emoticon.id === id)!)
               .map((emoticon) => {
@@ -121,9 +127,9 @@ const Index = () => {
               })}
           </div>
         </section>
-        <section className="max-w-7xl w-full mx-auto px-6 pb-2 mb-8 flex flex-col">
+        <section className="max-w-7xl w-full mx-auto px-10 0.5md:px-6 pb-2 mb-8 flex flex-col">
           <h2 className="text-2xl font-semibold mt-8">모든 이모티콘</h2>
-          <div className="mt-2 grid grid-cols-5 w-full gap-4">
+          <div className="mt-2 grid grid-cols-5 0.5xl:grid-cols-4 0.5lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 w-full gap-4">
             {[...emoticons].reverse().map((emoticon) => {
               return (
                 <Link

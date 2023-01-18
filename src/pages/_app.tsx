@@ -1,5 +1,5 @@
-import { AnimatePresence } from "framer-motion";
 import type { AppProps } from "next/app";
+import { AnimatePresence } from "framer-motion";
 import "@/styles/fonts.css";
 import "@/styles/globals.css";
 
