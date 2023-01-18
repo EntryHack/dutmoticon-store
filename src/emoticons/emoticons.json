@@ -138,5 +138,16 @@
       "imageType": "svg"
     },
     "date": 1674047100000
+  },
+  {
+    "id": "dutmoticon_008",
+    "title": "네글티콘",
+    "authors": [{ "id": "63240ad084ebd002950dd28b", "name": "코리아볼" }],
+    "image": {
+      "id": "63c7fc1c562e6943d50c86e4",
+      "filename": "7onfe4fbld1qhwrm0deda2c9435klms4",
+      "imageType": "svg"
+    },
+    "date": 1674050160000
   }
 ]
