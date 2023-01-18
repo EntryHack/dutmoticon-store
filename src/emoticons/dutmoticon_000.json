@@ -1,8 +1,38 @@
 [
   {
     "id": "63c7948a7b5371bb348923fe",
-    "name": "001.svg",
+    "name": "000.svg",
     "filename": "buptdgl8ld1apkyb2fjnf1cfe45hseg3",
+    "imageType": "svg"
+  },
+  {
+    "id": "63c8087080df215995c869c5",
+    "name": "001-냅킨_Napkin.svg",
+    "filename": "mq71hhvvld1sdk801w9ga2c943eftnxt",
+    "imageType": "svg"
+  },
+  {
+    "id": "63c809d8211d2b1d25b26b77",
+    "name": "002-냅킨_Napkin.svg",
+    "filename": "q90y2vsfld1sl9jr2yw3f1cfe40abmgg",
+    "imageType": "svg"
+  },
+  {
+    "id": "63c816523e6b7e7bebbeee20",
+    "name": "003-아티.svg",
+    "filename": "acf2hq17ld1uhogl231mf1cfe40fodzd",
+    "imageType": "svg"
+  },
+  {
+    "id": "63c8170380df215995c86ac3",
+    "name": "004-아티.svg",
+    "filename": "sdkfdrwbld1ulitl1w9ga2c9438w7j5a",
+    "imageType": "svg"
+  },
+  {
+    "id": "63c8152080df215995c86ab3",
+    "name": "005-아티.svg",
+    "filename": "ke4s09afld1ub50r1w9ga2c9431ikh7t",
     "imageType": "svg"
   }
 ]

@@ -52,7 +52,11 @@
   {
     "id": "dutmoticon_000",
     "title": "Dutmoticon",
-    "authors": [{ "id": "60bc5559659bf40bd15d022c", "name": "띠까" }],
+    "authors": [
+      { "id": "60bc5559659bf40bd15d022c", "name": "띠까" },
+      { "id": "626b764888d5c90037c7d27a", "name": "냅킨_Napkin" },
+      { "id": "59bd6973deeddd381b824a2e", "name": "아티" }
+    ],
     "image": {
       "id": "63c158d132b96d5d24aa7bb7",
       "filename": "5gorjxehlcujhwfp1wyrf1cfe44m4cpn",
