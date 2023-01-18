@@ -8,13 +8,12 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
       <Nav />
       <motion.main
         variants={{
-          initial: { opacity: 0 },
-          animate: { opacity: 1 },
+          initial: { opacity: 0, x: 0, y: -50 },
+          animate: { opacity: 1, x: 0, y: 0 },
         }}
         initial="initial"
         animate="animate"
-        exit="exit"
-        transition={{ duration: 0.5 }}
+        transition={{ type: "spring", duration: 1, bounce: 0.5 }}
         className="flex flex-col h-full"
       >
         {children}
