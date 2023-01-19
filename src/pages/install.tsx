@@ -36,10 +36,18 @@ const Index: NextPage<{ version: string }> = ({ version }) => {
               </p>
               <div className="flex xs:flex-col gap-3 mt-5">
                 <a
-                  href={`https://github.com/thoratica/dutmoticon/archive/refs/tags/${version}.zip`}
+                  href="https://chrome.google.com/webstore/detail/dutmoticon/mjlbcokobnkhkgmoofapljhfgcbbchmo"
+                  target="_blank"
                   className="text-[22px] font-semibold px-9 py-[18px] leading-4 rounded-lg bg-white/20 backdrop-blur-md text-white text-shadow shadow-md"
                 >
-                  {`지금 다운로드 (v${version})`}
+                  {`Chrome 웹 스토어에서 다운로드`}
+                </a>
+                <a
+                  href={`https://github.com/thoratica/dutmoticon/archive/refs/tags/${version}.zip`}
+                  target="_blank"
+                  className="text-[22px] font-semibold px-9 py-[18px] leading-4 rounded-lg bg-white/20 backdrop-blur-md text-white text-shadow shadow-md"
+                >
+                  {`ZIP으로 다운로드 (v${version})`}
                 </a>
               </div>
             </div>
@@ -63,7 +71,10 @@ const Index: NextPage<{ version: string }> = ({ version }) => {
                   className="flex flex-col rounded-xl overflow-hidden border border-neutral-100 shadow-md hover:transform hover:-translate-y-1.5 transition-transform duration-300"
                   key={i}
                 >
-                  <img src={`/guide/step-${i + 1}.png`} className="border-b border-b-neutral-100 aspect-video object-cover" />
+                  <img
+                    src={`/guide/step-${i + 1}.png`}
+                    className="border-b border-b-neutral-100 aspect-video object-cover"
+                  />
                   <div className="flex flex-col justify-center w-full min-w-0 px-4 py-3">
                     <span className="text-lg font-medium leading-5">{step}</span>
                   </div>
