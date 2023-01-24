@@ -12,9 +12,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       : undefined;
 
     if (ids) return res.status(200).json(ids.map((id) => emoticons.find((emoticon) => emoticon.id === id)));
-    res.status(200).json(emoticons);
+    return res.status(200).json([]);
   } catch (_) {
-    throw _;
     res.status(500).json({});
   }
 };
