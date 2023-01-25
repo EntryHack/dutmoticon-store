@@ -97,7 +97,7 @@ const Index: NextPage<{
           <div className="max-w-6xl mx-auto px-10 0.5md:px-6 py-10 grid grid-cols-6 0.5lg:grid-cols-4 sm:grid-cols-3 gap-x-16 lg:gap-x-8 0.5lg:gap-x-16 0.5md:gap-x-8 sm:gap-x-16 xs:gap-x-8 gap-y-12 h-full">
             {images.map((image) => {
               return (
-                <div className="flex aspect-square justify-center">
+                <div className="flex aspect-square justify-center" key={image.id}>
                   <img
                     src={`https://playentry.org/uploads/${image.filename.slice(0, 2)}/${image.filename.slice(2, 4)}/${
                       image.filename
