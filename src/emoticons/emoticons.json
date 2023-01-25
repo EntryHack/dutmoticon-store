@@ -157,5 +157,16 @@
       "imageType": "svg"
     },
     "date": 1674050160000
+  },
+  {
+    "id": "dutmoticon_009",
+    "title": "텏티콘",
+    "authors": [{ "id": "636f5696c2af2f00b48ce7ec", "name": "reeㅤ" }],
+    "image": {
+      "id": "63d10b2fae28aad81e63f506",
+      "filename": "cvpqy4y9ldbjyjsh16ouf1cfe495ftkw",
+      "imageType": "svg"
+    },
+    "date": 1674628200000
   }
 ]
